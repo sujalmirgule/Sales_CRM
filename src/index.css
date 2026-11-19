@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #E2E8F0;
+  }
+  body {
+    background-color: #F8FAFC;
+    color: #171717;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Sleek Scrollbar for tables and sidebars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Print Friendly Styles */
+@media print {
+  aside, header, button, .no-print {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  body {
+    background: white !important;
+  }
+}
